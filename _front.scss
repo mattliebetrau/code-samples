@@ -1,0 +1,295 @@
+.intro-text {
+	text-align: center;
+	margin-bottom: 60px;
+	color: $dark-grey;
+	padding: 0px 40px;
+	h3 {
+		margin: 0;
+		font-size: 2.25em;
+		font-weight: 100;
+		color: $dark-grey;
+	}
+	p {
+		max-width: 900px;
+		margin: 30px auto 0;
+	}
+}
+
+.info-box-wrapper {
+	margin: 0 auto; 
+	@include float-clear;
+}
+
+.info-box1-wrapper {
+	@include span(10);
+	margin-bottom: 20px;
+	@include breakpoint($break-small) {
+		@include span(6.5);
+	}
+}
+
+.info-box1 {
+	height: none;
+	background-color: $dark-blue;
+	background-image: url('../images/optimized/spa3.png');
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	h3 {
+		margin: 0;
+		color: #fff;
+		text-transform: uppercase;
+		border-top: 12px solid #fff;
+		border-bottom: 12px solid #fff;
+		padding: 10px 0;
+		font-family: bebas;
+		font-size: 2.6em;
+		font-weight: 100;
+		line-height: 1;
+	}
+	p {
+		color: #fff;
+		margin: 15px auto 0;
+		font-size: 0.9em;
+		margin-bottom: 30px;
+	}
+	a {
+		display: block;
+		text-transform: uppercase;
+		color: #fff;
+		text-decoration: none;
+		font-size: 0.85em;
+		font-weight: 800;
+		margin-bottom: 5px;
+		@extend .icon;
+		@extend .arrow;
+		&:before {
+			font-size: 0.75em;
+			margin-right: 5px;
+		}
+		&:hover {
+			color: darken(#fff, 20%);
+			text-decoration: underline;
+		}
+	}
+	.col-forty-five, .col-fifty-five {
+		float: none;
+		width: 100%;
+	}
+	@include breakpoint(715px) {
+		height: 320px;
+		padding-bottom: 0;
+		.col-forty-five {
+			float: left;
+			width: span(4);
+		}
+		.col-fifty-five {
+			float: left;
+			width: span(6);
+		}
+	}	
+}
+
+.info-box2-wrapper {
+	@include span(10);
+	@include breakpoint($break-small) {
+		@include span(3.5);
+	}
+}
+
+.info-box2 {
+	height: 320px;
+	background: url('../images/optimized/spaceinterior_placeholder.png');
+	background-size: cover;
+	padding-top: 30px;
+	position: relative;
+	h3 {
+		margin: 0;
+		color: #fff;
+		text-transform: uppercase;
+		text-align: center;
+		font-size: 1.5em;
+		width: 210px;
+		margin: 0 auto;
+	}
+	p {
+		color: #fff;
+		width: 85%;
+		margin: 15px auto 0;
+		font-size: 0.9em;
+		font-weight: 800;
+	}
+	.phone-number {
+		color: #fff;
+		text-align: center;
+		font-size: 1.5em;
+		margin-top: 20px;
+		font-weight: 800;
+		@media screen and (max-width: 350px) {
+			margin-top: 10px; 
+		}
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		width: 0; 
+		height: 0; 
+		border-left: 23px solid transparent;
+		border-right: 23px solid transparent;
+		border-top: 12px solid $light-grey;
+		top: 0;
+		left: 50%;
+		margin-left: -23px;
+	}
+}
+
+.callout-box1,
+.callout-box2, 
+.callout-box3,
+.callout-box4 {
+	margin: 0 auto 30px;
+	padding-left: $margin;
+	padding-right: $margin;
+	h3 {
+		@include font-size(18);
+		letter-spacing: -0.04em;
+		text-transform: uppercase;
+		color: #3A9FC5;
+		margin: $margin 0;
+	}
+	a {
+		margin-bottom: 5px; 
+		display: inline-block;
+		float: left;
+		clear: both;
+		text-decoration: none;
+		color: #3A9FC5;
+		font-weight: 600;
+		text-transform: uppercase;
+		font-size: 0.85em;
+		padding-left: 20px;
+		position: relative;
+		@extend .icon;
+		@extend .arrow_darker;
+		&:before {
+			position: absolute;
+			left: 0;
+			top: 0.25em;
+		}
+	}
+	a:hover {
+		color: darken($dark-blue, 20%);
+		text-decoration: underline;
+	}
+	.link-wrapper {
+		@include float-clear;
+		margin-top: $margin;
+		margin-bottom: $margin;
+		padding: 0;
+		border-top: none;
+		border-bottom: none;
+	}
+	img {
+		border-radius: 50%;
+	}
+	@include breakpoint(400px) {
+		max-width: 300px;
+	}
+	@include breakpoint($break-mobile) {
+		@include span(5);
+		max-width: none;
+		h3 {
+			margin-top: ($margin*2);
+		}
+		p,
+		.link-wrapper {
+			max-width: 300px;
+		}
+	}
+	@include breakpoint($break-small) {
+		@include span(2.5);
+		margin-bottom: 50px;
+		.link-wrapper {
+			width: auto;
+		}
+	}
+}
+
+.middle-section {
+	background-color: $light-grey;
+	padding-top: 40px;
+	padding-bottom: 80px;
+	@include breakpoint(700px) {
+		margin-top: 0;
+		padding-top: 230px;
+	}
+	@include breakpoint(825px) {
+		padding-top: 150px;
+	}
+	@include breakpoint(1100px) {
+		margin-top: auto;
+		padding-top: 40px;
+	}  
+}
+ 
+.bottom-section {
+	background-color: #fff;
+}
+
+.logo {
+	float: left;
+	margin: 0 4px 27px 20px;
+	@include breakpoint($break-full) {
+		margin: 0 4px 0 20px;
+	}
+	display: inline-block;
+	img {
+		display: block;
+	}
+	@include breakpoint(770px) {
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+}
+
+.callout-boxes {
+	margin-top: 70px;
+}
+
+.schedule-consultation {
+	background-color: $dark-grey;
+	width: 290px;
+	@include transform2d(rotate(270deg));
+	position: absolute;
+	right: -118px;
+	top: 220px;
+	z-index: 2;
+	color: #fff;
+	text-align: center;
+	font-size: 1.1em;
+	font-weight: 800;
+	box-sizing: border-box;
+	padding: 13px 10px;
+	text-decoration: none;
+	display: none;
+	@include breakpoint($break-mobile) {
+		display: block;
+	}
+	&:hover {
+		color: #fff;
+		text-decoration: none;
+		background-color: lighten($dark-grey, 15%);
+	}
+	.no-csstransforms & {
+		@include image-replace;
+		width: 54px;
+		height: 290px;
+		right: 0;
+		background-image: url(../images/optimized/ie8-schedule-button.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		background-position: center center;
+	}
+}
